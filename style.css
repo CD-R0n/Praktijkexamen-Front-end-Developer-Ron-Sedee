@@ -34,6 +34,10 @@ hr {
     border: 2px solid yellow;
     margin: 0%;
 }
+.sub {
+    font-size: smaller;
+    font-weight: bold;
+}
 img {
     width: 100%;
 }
@@ -57,7 +61,7 @@ figure {
 address {
     font-style: normal;
 }
-#mailto {
+.zwart {
     color: black;
 }
 iframe {
@@ -121,6 +125,12 @@ footer {
     }
     li {
         float: left;
+    }
+    .huidig {
+        background-color: #f57114;
+    }
+    a:hover {
+        background-color: #f57114;
     }
     #main {
         display: flex;

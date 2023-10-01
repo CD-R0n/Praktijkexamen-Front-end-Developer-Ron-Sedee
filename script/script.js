@@ -1,0 +1,3 @@
+$(() => {
+    $("#rechts").load("artikelen.html")
+})
