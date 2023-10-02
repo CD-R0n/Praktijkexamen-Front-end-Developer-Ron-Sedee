@@ -97,7 +97,7 @@ input, select, textarea {
     padding: 15px;
     border: 1px solid #cccccc;
 }
-input[type="submit"] {
+input[type="submit"], button {
     width: initial;
     background-color: #d15f0f;
     color: white;
@@ -137,5 +137,11 @@ footer {
     }
     #rechts img {
         width: calc(50% - 29px);
+    }
+    article {
+        font-size: small;
+    }
+    article:hover {
+        cursor: pointer;
     }
 }
