@@ -3,18 +3,31 @@ $(() => {
         alert("Er is een fout opgetreden:" + " " + jqxhr.status + " " + jqxhr.statusText);
     });
     function overzicht() {
-        $("#rechts").load("artikelen.html article:nth-of-type(-n+3)");
+        $("#rechts").load("artikelen.html article:nth-of-type(-n+3)", () => {
+            $("br").hide();
+        });
     };
     overzicht();
     $(".zwart").on("click", () => {
-        $("#rechts").load("blogbeheer.html #rechts");
+        $("#rechts").load("blogbeheer.html #rechts", () => {
+            $("form").unwrap();
+        });
     });
     $(document).on("click", "article", (event) => {
-        $("article").not(event.currentTarget).remove();
-        $(event.currentTarget).css("font-size", "larger");
-        $(event.currentTarget).on("click", () => {
-            overzicht();
+        $(event.currentTarget).clone().appendTo("#dialog");
+        $("#dialog br").show();
+        $("#dialog p:not(.sub)").append("<br><br>" + $("#dialog .sub").text());
+        $("#dialog p:not(.sub)").css("font-size", "larger").dialog({
+            title: $("#dialog h2").text(),
+            modal: true,
+            width: "auto",
+            height: "auto",
+            show: "fadeIn",
+            resizable: "false",
+            clickOutside: true,
+            clickOutsideTrigger: "#dialog"
         });
+        $("#dialog").empty();
     });
     $(document).on("click", "button", () => {
         overzicht();

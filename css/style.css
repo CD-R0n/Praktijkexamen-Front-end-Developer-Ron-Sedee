@@ -90,6 +90,9 @@ iframe {
     width: 33%;
     margin: 15px;
 }
+article {
+    font-size: small;
+}
 input, select, textarea {
     width: 100%;
     border-radius: 3px;
@@ -112,6 +115,9 @@ footer {
     padding: 45px;
     font-weight: bold;
     font-size: small;
+}
+#dialog {
+    display: none;
 }
 @media only screen and (min-width: 768px) {
     [class*="col-"] {
@@ -137,9 +143,6 @@ footer {
     }
     #rechts img {
         width: calc(50% - 29px);
-    }
-    article {
-        font-size: small;
     }
     article:hover {
         cursor: pointer;

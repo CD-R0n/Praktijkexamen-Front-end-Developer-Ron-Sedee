@@ -7,7 +7,8 @@
     <meta name="description" content="Praktijkexamenopdracht Front-end-Developer NHA">
     <meta name="original-source" content="https://cd-r0n.github.io/Praktijkexamen-Front-end-Developer-Ron-Sedee/">
     <title>HJ - Blogbeheer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="col-3">
@@ -37,11 +38,11 @@
             <form action="javascript:void(0);" method="post">
                 <label for="titel">Titel</label>
                 <br>
-                <input type="text" name="titel" id="titel">
+                <input type="text" name="titel" id="titel" required minlength="3">
                 <br><br>
                 <label for="artikel">Artikel</label>
                 <br>
-                <textarea name="artikel" id="artikel" rows="10"></textarea>
+                <textarea name="artikel" id="artikel" rows="10" required minlength="8"></textarea>
                 <br><br>
                 <input type="submit" value="Deel">
                 <button>Terug</button>
