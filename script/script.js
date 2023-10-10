@@ -8,10 +8,13 @@ $(() => {
         });
     };
     overzicht();
-    $(".zwart").on("click", () => {
+    function beheer() {
         $("#rechts").load("blogbeheer.html #rechts", () => {
             $("form").unwrap();
         });
+    }
+    $(".zwart").on("click", () => {
+        beheer();
     });
     $(document).on("click", "article", (event) => {
         $(event.currentTarget).clone().appendTo("#dialog");
