@@ -18,7 +18,7 @@ $(() => {
     });
     $(document).on("click", "article", (event) => {
         $(event.currentTarget).clone().appendTo("#dialog");
-        $("#dialog br").show();
+        $("#dialog br").show(); //voor duidelijkere opmaak
         $("#dialog p:not(.sub)").append("<br><br>" + $("#dialog .sub").text());
         $("#dialog p:not(.sub)").css("font-size", "larger").dialog({
             title: $("#dialog h2").text(),
@@ -26,7 +26,7 @@ $(() => {
             width: "auto",
             height: "auto",
             show: "fadeIn",
-            resizable: "false",
+            resizable: "false", //werkt niet fijn i.c.m. clickoutside plugin
             clickOutside: true,
             clickOutsideTrigger: "#dialog"
         });
